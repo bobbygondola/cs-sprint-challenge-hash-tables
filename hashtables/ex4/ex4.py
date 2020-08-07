@@ -2,7 +2,8 @@
 
 def has_negatives(a):
     """
-    YOUR CODE HERE
+    using absolute value to find duplicates,
+    level the playing field
     """
     hash_table = {}
     results = []
@@ -12,12 +13,14 @@ def has_negatives(a):
     
     for i in a:
         absolute = abs(i)
-        print(absolute)
+        # print(f"All values absolute -> {absolute}")
         
-        if hash_table.get(absolute) is not None:
+        if hash_table.get(absolute) is not None: # Value - None to start, will append.
             results.append(absolute)
+            # print(f'mid append -> {results}')
         else:
             hash_table[absolute] = absolute
+            print(f"hash_table -> {hash_table}")
             
     return results
 
