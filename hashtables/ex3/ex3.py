@@ -1,10 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    return result
+    hash_table = {}
+    results = []
+    
+    for array in arrays:
+        for i in array:
+            key = i
+            if key not in hash_table:
+                hash_table[key] = 1
+            else:
+                hash_table[key] += 1
+                
+    for i in hash_table:
+        if hash_table[i] > 1:
+            results.append(i)
+
+    return results
 
 
 if __name__ == "__main__":
