@@ -58,7 +58,10 @@ function will always be handed a valid ticket chain as input.
   another ticket where Boston is the starting location, `('BOS',
   'JFK')`. 
 
-* We can hash each ticket such that the starting location is the key and
-  the destination is the value. Then, when constructing the entire
+* We can hash each ticket such that the starting
+
+  location is the key and the destination is the value.
+  
+  Then, when constructing the entire
   route, the `i`th location in the route can be found by checking the
   hash table for the `i-1`th location.

@@ -1,10 +1,29 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+'''
+Finding duplicated, KVP =+ 1 on each occurence
+'''
+    hash_table = {}
+    results = []
+    
+    for array in arrays:
+        for i in array:
+            num = i
+            if num not in hash_table:
+                hash_table[num] = 1
+            else:
+                '''
+                if already in, gets incremented..
+                '''
+                hash_table[num] += 1
+                
+    for i in hash_table:
+        if hash_table[i] > 1:
+            '''
+            send the duplicates
+            '''
+            results.append(i)
 
-    return result
+    return results
 
 
 if __name__ == "__main__":
